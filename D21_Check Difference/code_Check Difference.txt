@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+bool checkDiff(int *arr,int N,int K)
+{
+    unordered_set<int> elements;
+    for(int i = 0; i<N; i++){
+        int target1 = arr[i] + K;
+        int target2 = arr[i] - K;
+        if(elements.find(target1) != elements.end() || elements.find(target2) != elements.end()){
+            return true;
+        }
+        elements.insert(arr[i]);
+    }
+    return false;
+}

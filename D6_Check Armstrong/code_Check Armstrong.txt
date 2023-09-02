@@ -1,0 +1,19 @@
+bool checkArmstrong(int n){
+
+	int c = log10(n)+1, sum = 0;
+	int r;
+	int dup = n;
+
+	while(n>0)
+
+	{
+		r = n%10;
+		sum += pow(r,c);
+		n = n/10;
+
+	}
+
+	if(sum==dup) return true;
+
+	return false;
+}

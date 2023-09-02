@@ -1,0 +1,9 @@
+int dataTypes(string type) {
+
+if(type[0]=='L'||type[0]=='D') return 8;
+
+else if(type[0]=='C') return 1;
+
+else return 4;
+
+}
